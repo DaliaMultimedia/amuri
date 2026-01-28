@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
   font-family: "News Cycle", sans-serif;
   color: #fffbf3;
-  background-image: url("/img/fondo.jpg");
+  background-image: url("/img/fondo.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -277,3 +277,4 @@ main {
     max-width: 440px;
   }
 }
+
