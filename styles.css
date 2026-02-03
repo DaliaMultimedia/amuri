@@ -13,12 +13,13 @@ html, body {
 body {
   min-height: 100vh;
   font-family: "News Cycle", sans-serif;
-  color: #fffbf3;
-  background-image: url("/img/fondo.webp");
+  color: #ffffff;           /* texto claro para que respire */
+  background: #000000;      /* NEGRO PURO */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 
 a {
   color: inherit;
@@ -48,15 +49,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 16px 20px;
-  background: linear-gradient(
-    270deg,
-    #540c0c,
-    #330303,
-    #860303,
-    #610c0c,
-    #0c0000,
-    #4b0303
-  );
+  background: #000000;
   background-size: 600% 600%;
   animation: gradientFlow 18s ease infinite;
 }
@@ -138,98 +131,16 @@ header {
    MAIN
 ===================== */
 main {
-  padding-top: 110px;
-  padding-inline: 20px;
-}
-
-/* =====================
-   MANIFESTO
-===================== */
-.manifesto-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  margin-bottom: 80px;
-}
-
-.manifesto-wrapper {
-  position: relative;
-  max-width: 320px;
-  width: 100%;
-}
-
-.manifesto-wrapper img {
-  width: 100%;
-  display: block;
-  opacity: 0.9;
-}
-
-.manifesto-download {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
-  padding: 8px;
-  font-size: 1.2rem;
-  opacity: 0.7;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.manifesto-download:hover {
-  opacity: 1;
-  transform: scale(1.15);
-}
-
-/* =====================
-   CARD
-===================== */
-.card {
-  max-width: 360px;
-  width: 100%;
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 12px;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(4px);
 }
 
-.card img {
-  width: 100%;
-  display: block;
-}
 
-.card-body {
-  padding: 16px;
-}
 
-.card h3 {
-  margin: 0 0 8px;
-  font-family: "Mountains of Christmas", serif;
-}
 
-.card p {
-  font-family: "Tagesschrift", system-ui;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  opacity: 0.85;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 6px 14px;
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 20px;
-  letter-spacing: 0.1em;
-  transition: background 0.3s ease, letter-spacing 0.3s ease;
-}
-
-.card a:hover {
-  background: rgba(255,255,255,0.1);
-  letter-spacing: 0.2em;
-}
 
 /* =====================
    TOAST
@@ -258,23 +169,34 @@ main {
 }
 
 /* =====================
-   DESKTOP
+   Anomaly flower
 ===================== */
-@media (min-width: 1024px) {
+.anomaly-section {
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 110px);
 
-  main {
-    padding-inline: 80px;
-  }
+  /* Evita cualquier desborde raro en mobile */
+  max-width: 100vw;
+  max-height: calc(100vh - 110px);
 
-  .manifesto-section {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-  }
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 
-  .manifesto-wrapper {
-    max-width: 440px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.anomaly-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+
+  /* Esto ayuda MUCHO en celulares */
+  transform: translateZ(0);
+}
